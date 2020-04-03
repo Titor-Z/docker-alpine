@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## Alpine Docker Image Source
 
-You can use the [editor on GitHub](https://github.com/Titor-Z/docker-alpine/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Alpine Docker image. 是在alpine的官方image基之上，加入了平时开发中常用的几个功能和中国的时区设置。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 更改内容如下：
+- Vim 方便进入容器实例后快速更改和查看文件内容。
+- Git 方便通过Git clone 远程资源代码，同时也方便本地源码的管理。
+- Tzdata 时区数据库（临时使用），设置服务器的正确时区（本镜像默认使用 Asia/shanghai 时区）。
+- Tencent镜像源 更改系统默认的系统源，使用腾讯的开源镜像源（系统下载和更新会更快）
 
-### Markdown
+__PS:__ 综上所述，本镜像添加了Vim、Git功能模块。设置系统默认时区为中国上海（东8区），更改为国内的腾讯镜像源。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Titor-Z/docker-alpine/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
