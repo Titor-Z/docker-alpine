@@ -1,6 +1,6 @@
-# Alpine Docker Image Source
+# __Alpine Docker Image Source__
 
-## 什么是Alpine Docker Image
+## 什么是Alpine Docker Image ?
 Alpine Docker image. 是在alpine的官方image基础之上，加入了平时开发中常用的几个功能，并设置系统的默认时区为中国上海（东8区）。
 
 我们不破坏官方的Alpine Docker，只是做了开发中最基础的拓展，让Alpine可以外挂宿主机文件。既可以作为你的基础Image镜像，也可以作为本地项目开发环境的底层管理系统来使用。
@@ -15,7 +15,7 @@ __PS:__
 综上所述，本镜像添加了Vim、Git功能模块。设置系统默认时区为中国上海（东8区），更改为国内的腾讯镜像源。
 
 
-## 如何使用
+## 如何使用 ?
 
 ### 用法1:
 在Dockerfile中作为基础镜像使用：
