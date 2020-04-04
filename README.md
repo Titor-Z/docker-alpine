@@ -29,11 +29,12 @@ VOLUME /root/mysql/
 CMD ["mysql"]
 ```
 作为基础镜像使用，编写你自己的Dockerfile即可。
+以上代码仅供参考。
 
 ### 用法2:
 作为容器实例使用：
 
-```sh
+```bash
 docker run \
   -it \
   --name MyAlpine \
@@ -41,4 +42,5 @@ docker run \
   foolsecret/alpine
 ```
 常用在服务器环境搭建（如PHP composer安装文件，npm依赖安装，Git文件下载等等），如果你不喜欢Ubuntu、CentOS的package管理工具，或你不希望破坏宿主机的本地环境，那你可以将当前的实例作为本地宿主机的开发系统。如果你对Alpine系统更加熟悉的话，那上手是很快的。
-优势在于，可以向容器内挂载外部宿主机文件，在容器内部对宿主机文件进行操作。
+
+优势在于，可以向容器内挂载外部宿主机文件，在容器内部对宿主机文件进行操作，而不会破坏宿主机的系统环境。
