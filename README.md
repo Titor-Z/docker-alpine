@@ -3,7 +3,7 @@
 # **Alpine Docker Image** <br><br>
 
 > **SLOGAN**：
-> <br>适合国内开发者的Alpine基础镜像。大家都在用，你还不来试试么？ 
+> <br>适合国内开发者的Alpine基础镜像。 
 
 <br>
 
