@@ -42,3 +42,4 @@ VOLUME  /root/
 # 默认进入命令：
 #   进入实例执行 /bin/sh （不然无法启动）
 ENTRYPOINT [ "/bin/sh" ]
+
