@@ -10,7 +10,7 @@ LABEL Maintainer Titor<foolsecret@163.com>
 WORKDIR /
 
 # 设置国内镜像源：MIRRORS.TENCENT.COM。
-RUN echo "https://mirrors.cloud.tencent.com/alpine/latest-stable/main \n https://mirrors.cloud.tencent.com/alpine/latest-stable/community" \
+RUN echo -e "https://mirrors.cloud.tencent.com/alpine/latest-stable/main\nhttps://mirrors.cloud.tencent.com/alpine/latest-stable/community" \
     > /etc/apk/repositories
 
 #
