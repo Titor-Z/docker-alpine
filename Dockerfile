@@ -20,8 +20,7 @@ COPY  ./repositories  /etc/apk/
 #       Tzdata 时区数据库。
 RUN apk update && \
     apk upgrade && \
-    apk add --no-cache vim \
-            git \
+    apk add --no-cache \
             tzdata
 
 #
