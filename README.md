@@ -1,4 +1,4 @@
-<br><br>
+<img src="https://wiki.alpinelinux.org/images/alogo.png">
 
 # **Alpine Docker Image** <br><br>
 
@@ -11,6 +11,17 @@
 Alpine Docker image —— 在alpine的官方image基础之上，加入了平时开发中常用的几个功能，并对系统进行了基本的设置。
 
 我们不破坏官方的Alpine Docker，只是做了开发中最基础的拓展，让Alpine可以作为你的基础Image镜像，也可以作为本地项目开发环境的底层管理系统来使用。
+
+<br>
+
+## 镜像标签说明
+- `latest`、`version-*.*.*` <br>
+基础镜像版本。只包含系统基础设置，文件体积最小，适合用来做为基础镜像使用。<br>
+如若要使用最新的版本，使用时可忽略标签 或 使用 `latest` 标签。
+
+- `dev`、`dev-*.*.*` <br>
+开发环境版本。包含常用软件和基础系统设置。文件体积偏大，适合作为本地开发环境或者服务器开发环境的实例使用。<br>
+如若要使用最新的版本，请使用 `dev` 标签。
 
 <br>
 
@@ -65,7 +76,7 @@ docker run \
   -it \
   --name MyAlpine \
   -v ${HOME}/:/root/ \
-  foolsecret/alpine
+  foolsecret/alpine:dev
 ```
 常用在服务器环境搭建（如PHP composer安装文件，npm依赖安装，Git文件下载等等），如果你不喜欢Ubuntu、CentOS的package管理工具，或你不希望破坏宿主机的本地环境，那你可以将当前的实例作为本地宿主机的开发系统。如果你对Alpine系统更加熟悉的话，那上手是很快的。
 
