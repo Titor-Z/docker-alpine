@@ -1,4 +1,4 @@
-FROM alpine
+FROM foolsecret/alpine
 
 # 作者信息，维护者信息
 LABEL Author Titor<foolsecret@163.com>
@@ -10,8 +10,8 @@ LABEL Maintainer Titor<foolsecret@163.com>
 WORKDIR /
 
 # 设置国内镜像源：MIRRORS.TENCENT.COM。
-RUN echo -e "https://mirrors.cloud.tencent.com/alpine/latest-stable/main\nhttps://mirrors.cloud.tencent.com/alpine/latest-stable/community" \
-    > /etc/apk/repositories
+# RUN echo -e "https://mirrors.cloud.tencent.com/alpine/latest-stable/main\nhttps://mirrors.cloud.tencent.com/alpine/latest-stable/community" \
+#     > /etc/apk/repositories
 
 #
 # 系统操作：
@@ -19,23 +19,20 @@ RUN echo -e "https://mirrors.cloud.tencent.com/alpine/latest-stable/main\nhttps:
 #   安装 VIM编辑器，
 #       Git 历史记录管理工具，
 #       Tzdata 时区数据库。
-RUN apk update && \
-    apk upgrade && \
-    apk add --no-cache vim \
-            git \
-            tzdata
+RUN apk update upgrade && \
+    apk add --no-cache vim git tzdata
 
 #
 # 设置时区：
 #   设置默认系统时区为 中国上海，
 #   删除Tzdata 时区数据库，减少空间占用。
-RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime && \
-    echo "Asia/shanghai" > /etc/timezone && \
-    apk del tzdata
+# RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime && \
+#     echo "Asia/shanghai" > /etc/timezone && \
+#     apk del tzdata
 
 
 # 默认进入时的目录位置
-WORKDIR /
+WORKDIR /root/
 
 # 对外挂载 /root/目录，
 VOLUME  /root/
