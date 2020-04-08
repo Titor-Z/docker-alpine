@@ -19,9 +19,9 @@ RUN echo -e "https://mirrors.cloud.tencent.com/alpine/latest-stable/main\nhttps:
 #   安装 VIM编辑器，
 #       Git 历史记录管理工具，
 #       Tzdata 时区数据库。
-RUN apk update && \
-    apk upgrade && \
-    apk add --no-cache \
+# RUN apk update && \
+#     apk upgrade && \
+RUN   apk add --no-cache \
             tzdata
 
 #
