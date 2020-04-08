@@ -21,8 +21,7 @@ RUN echo -e "https://mirrors.cloud.tencent.com/alpine/latest-stable/main\nhttps:
 #       Tzdata 时区数据库。
 # RUN apk update && \
 #     apk upgrade && \
-RUN   apk add --no-cache \
-            tzdata
+RUN   apk add --no-cache tzdata
 
 #
 # 设置时区：
